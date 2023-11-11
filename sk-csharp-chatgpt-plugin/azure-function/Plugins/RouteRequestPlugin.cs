@@ -54,9 +54,6 @@ public class RouteRequestPlugin
             default:
                 return "I'm sorry, I don't understand.";
         }
-
-        // Add the math plugin
-        var mathPlugin = kernel.ImportFunctions(new Plugins.MathPlugin.Math(), "MathPlugin");
         
         // Create planner
         var planner = new SequentialPlanner(_kernel);
