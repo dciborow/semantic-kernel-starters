@@ -47,7 +47,7 @@ def ExecuteFunction(req: func.HttpRequest) -> func.HttpResponse:
     try:
         req_body = req.get_json()
     except ValueError:
-        logging.warning(f"No JSON body provided in request.")
+        logging.warning("No JSON body provided in request.")
 
     context_variables = ContextVariables()
     for k, v in req_body.items():
