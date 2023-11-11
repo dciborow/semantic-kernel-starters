@@ -13,7 +13,7 @@ public class RouteRequestPlugin
         // Save the original user request
         // var sampleRequest = "If my investment of 2130.23 dollars increased by 23%, how much would I have after I spent $5 on a latte?";
         var request = input;
-        var mathPlugin = kernel.ImportFunctions(new Plugins.AzureDevOpsPlugin.AzureDevOpsBuildPlugin(), "AzureDevOpsBuildPlugin");
+        var adoBuildPlugin = kernel.ImportFunctions(new Plugins.AzureDevOpsPlugin.AzureDevOpsBuildPlugin(), "AzureDevOpsBuildPlugin");
 
         // Create planner
         var planner = new SequentialPlanner(_kernel);
