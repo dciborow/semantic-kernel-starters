@@ -26,6 +26,9 @@ public class RouteRequestPlugin
         IAzureDevOpsPlugin AzureDevOpsPlugin;
         switch (intent)
         {
+            case "Board":
+                AzureDevOpsPlugin =  _kernel.ImportFunctions(new Plugins.AzureDevOpsPlugin.AzureDevOpsReleasePlugin(), "AzureDevOpsBoardPlugin");
+                break;
             case "Code":
                 AzureDevOpsPlugin =  _kernel.ImportFunctions(new Plugins.AzureDevOpsPlugin.AzureDevOpsReleasePlugin(), "AzureDevOpsCodePlugin");
                 break;
