@@ -23,13 +23,7 @@ public class RouteRequestPlugin
         Console.WriteLine(JsonSerializer.Serialize(plan, new JsonSerializerOptions { WriteIndented = true }));
 
         // Run the pipeline
-        var output = await this._kernel.RunAsync(
-            request,
-            getNumbers,
-            extractNumbersFromJson,
-            MathFunction,
-            createResponse
-        );
+        var output = await this._kernel.RunAsync(plan);
         Console.WriteLine("Plan results:");
         Console.WriteLine(output.GetValue<string>()!.Trim());
 
