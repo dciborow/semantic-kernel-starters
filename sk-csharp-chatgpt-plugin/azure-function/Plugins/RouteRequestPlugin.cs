@@ -11,12 +11,12 @@ public class RouteRequestPlugin
     )
     {
         // Save the original user request
-        string request = input;
+        // var sampleRequest = "If my investment of 2130.23 dollars increased by 23%, how much would I have after I spent $5 on a latte?";
+        var request = input;
         var mathPlugin = kernel.ImportFunctions(new Plugins.AzureDevOpsPlugin.AzureDevOps(), "AzureDevOpsPlugin");
 
         // Create planner
         var planner = new SequentialPlanner(_kernel);
-        var ask = "If my investment of 2130.23 dollars increased by 23%, how much would I have after I spent $5 on a latte?";
         var plan = await planner.CreatePlanAsync(ask);
         
         Console.WriteLine("Plan:\n");
