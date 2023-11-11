@@ -18,7 +18,7 @@ public class RouteRequestPlugin
         var getIntentVariables = new ContextVariables
         {
             ["input"] = input,
-            ["options"] = "Code, PullRequest, Build, Release"
+            ["options"] = "Board, Code, PullRequest, Build, Release"
         };
         string intent = (await _kernel.RunAsync(getIntentVariables, getIntent)).GetValue<string>()!.Trim();
     
