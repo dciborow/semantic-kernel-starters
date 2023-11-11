@@ -3,7 +3,7 @@ using Microsoft.SemanticKernel;
 
 namespace Plugins.AzureDevOpsPlugin;
 
-public class AzureDevOpsPlugin
+public class AzureDevOpsBuildPlugin
 {
     [SKFunction, Description("Get the work items linked to a build")]
     public static string BuildLinkedWorkItems(
