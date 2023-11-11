@@ -17,7 +17,7 @@ public class RouteRequestPlugin
 
         // Create planner
         var planner = new SequentialPlanner(_kernel);
-        var plan = await planner.CreatePlanAsync(ask);
+        var plan = await planner.CreatePlanAsync(request);
         
         Console.WriteLine("Plan:\n");
         Console.WriteLine(JsonSerializer.Serialize(plan, new JsonSerializerOptions { WriteIndented = true }));
